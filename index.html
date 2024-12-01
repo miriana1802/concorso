@@ -7,87 +7,114 @@
     <title>Concorso: Scopri il profumo delle tradizioni italiane</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f2f2f2;
             margin: 0;
             padding: 0;
             color: #333;
         }
+        h1 {
+            text-align: center;
+            color: #34495e;
+            font-size: 3em;
+            margin-top: 40px;
+            letter-spacing: 2px;
+            font-weight: 300;
+        }
+        p {
+            text-align: center;
+            font-size: 1.1em;
+            margin-top: 10px;
+            color: #7f8c8d;
+        }
+
         .container {
             width: 90%;
             max-width: 1200px;
-            margin: auto;
-            padding: 30px;
-        }
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        h2 {
-            color: #e74c3c;
-            font-size: 1.6em;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 1.1em;
-            line-height: 1.6;
-            margin-bottom: 15px;
+            margin: 0 auto;
+            padding: 50px 0;
         }
 
         .experience-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            gap: 40px;
             margin-top: 30px;
         }
 
         .experience-card {
-            background-color: #fff;
-            border-radius: 10px;
+            background-color: #ffffff;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+            border: 2px solid #ecf0f1;
         }
         .experience-card:hover {
             transform: translateY(-10px);
         }
+
         .experience-card img {
             width: 100%;
-            height: 250px;
+            height: 300px;
             object-fit: cover;
-            border-bottom: 2px solid #e74c3c;
+            filter: brightness(80%);
+            transition: filter 0.3s ease-in-out;
         }
-        .experience-card h2 {
-            margin: 15px;
-            font-size: 1.3em;
-            color: #2c3e50;
-        }
-        .experience-card p {
-            margin: 0 15px 15px;
-            font-size: 1em;
-            color: #7f8c8d;
+        .experience-card:hover img {
+            filter: brightness(100%);
         }
 
-        @media (max-width: 768px) {
+        .experience-card h2 {
+            font-size: 1.5em;
+            color: #2c3e50;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .experience-card p {
+            font-size: 1em;
+            color: #7f8c8d;
+            padding: 20px;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .experience-card .cta {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+            padding: 10px;
+            background-color: #e74c3c;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .experience-card .cta:hover {
+            background-color: #c0392b;
+        }
+
+        @media (max-width: 1024px) {
             .experience-container {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 768px) {
             .experience-container {
                 grid-template-columns: 1fr;
             }
             h1 {
-                font-size: 2em;
+                font-size: 2.5em;
             }
             .experience-card h2 {
                 font-size: 1.2em;
             }
             .experience-card p {
-                font-size: 0.95em;
+                font-size: 1em;
             }
         }
     </style>
@@ -95,25 +122,28 @@
 <body>
     <div class="container">
         <h1>Concorso: Scopri il profumo delle tradizioni italiane</h1>
-        <p style="text-align:center; font-size:1.2em;">Partecipa all'estrazione per vincere esperienze indimenticabili!</p>
+        <p>Partecipa all'estrazione di esperienze esclusive e indimenticabili!</p>
 
         <div class="experience-container">
             <div class="experience-card">
                 <img src="https://github.com/miriana1802/concorso/blob/main/agrumi.jpg?raw=true" alt="Agrumeti Siciliani">
-                <h2>1. Tour degli agrumeti siciliani</h2>
-                <p>Vivi un'esperienza unica con un tour immersivo negli agrumeti siciliani, tra profumi inebrianti e paesaggi mozzafiato. Scopri i segreti della coltivazione degli agrumi e partecipa a una degustazione esclusiva di marmellate artigianali, mieli aromatici e altri prodotti tipici siciliani, preparati con metodi tradizionali. Il tour include una guida esperta che ti accompagnerà attraverso la storia e le curiosità di questi frutti simbolo della Sicilia.</p>
+                <h2>Tour degli Agrumeti Siciliani</h2>
+                <p>Vivi un'esperienza unica tra profumi inebrianti e paesaggi mozzafiato. Scopri la tradizione siciliana della coltivazione degli agrumi con una guida esperta e una degustazione di marmellate e mieli artigianali.</p>
+                <div class="cta">Partecipa</div>
             </div>
 
             <div class="experience-card">
                 <img src="https://github.com/miriana1802/concorso/blob/main/boschi.jpeg?raw=true" alt="Boschi Alpini">
-                <h2>2. Escursione guidata nei boschi alpini</h2>
-                <p>Partecipa a un'affascinante escursione guidata nei boschi alpini, un viaggio tra sentieri incantati immersi nella natura incontaminata. Esplora la ricca flora locale, imparando a riconoscere piante autoctone e le loro proprietà, mentre ti lasci avvolgere dal profumo autentico del muschio e dell'aria di montagna. Al termine, riceverai un piccolo omaggio naturale, come un sacchetto di essenze boschive, per portare con te un pezzo di questa esperienza rigenerante.</p>
+                <h2>Escursione nei Boschi Alpini</h2>
+                <p>Esplora la natura incontaminata dei boschi alpini. Immergiti nella flora locale e scopri la biodiversità, mentre respiri l'aria fresca di montagna. Un'esperienza rigenerante a contatto con la natura.</p>
+                <div class="cta">Partecipa</div>
             </div>
 
             <div class="experience-card">
                 <img src="https://github.com/miriana1802/concorso/blob/main/firenze.jpeg?raw=true" alt="Giardini Botanici Toscana">
-                <h2>3. Visita a giardini botanici in Toscana</h2>
-                <p>Immergiti nella magia di un tour guidato nei giardini botanici della Toscana, un paradiso di biodiversità e bellezza naturale. Esplora collezioni uniche di piante esotiche e locali, ascoltando racconti affascinanti sulla storia e l'importanza della flora toscana. Lasciati avvolgere dai colori e dai profumi di un paesaggio curato con passione. Al termine della visita, potrai godere di una degustazione di tisane o prodotti artigianali legati alle piante locali.</p>
+                <h2>Visita ai Giardini Botanici Toscani</h2>
+                <p>Visita i giardini botanici della Toscana, un angolo di paradiso naturale. Esplora piante rare e scoprine la storia, mentre ti lasci avvolgere dalla bellezza dei colori e dei profumi di questo incantevole paesaggio.</p>
+                <div class="cta">Partecipa</div>
             </div>
         </div>
     </div>
